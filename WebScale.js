@@ -260,8 +260,8 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
-		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
+		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
 		// 									offsetLeft:       [Number]        horizontal offset of the visible area compared to the whole area
@@ -273,6 +273,8 @@
 		//
 		// 									reduce:           [Boolean]       reduces visible if the reference area is too small
 		// 									enlarge:          [Boolean]       increase the area visible if the reference is too high
+		//
+		// 									auto:             [Boolean]       if the reference listening for the event "resize", WebScale puts to automatically update the visible area (note only works on window or document or body)
 		// 								}
 		// @return Object               the new instance of WebScale
 		//
@@ -317,8 +319,8 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
-		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
+		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
 		// 									offsetLeft:       [Number]        horizontal offset of the visible area compared to the whole area
@@ -330,6 +332,8 @@
 		//
 		// 									reduce:           [Boolean]       reduces visible if the reference area is too small
 		// 									enlarge:          [Boolean]       increase the area visible if the reference is too high
+		//
+		// 									auto:             [Boolean]       if the reference listening for the event "resize", WebScale puts to automatically update the visible area (note only works on window or document or body)
 		// 								}
 		// @return Object               the new instance of WebScale
 		//
@@ -373,10 +377,10 @@
 		// maximum height of the visible zone (0 to disable)
 		maxHeight: 0,
 
-		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
+		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		top: 0,
 
-		// horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
+		// horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		left: 0,
 
 		// vertical offset of the visible area compared to the whole area

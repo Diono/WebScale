@@ -14,7 +14,7 @@ tools to customize a web page dimensions
 
 WebScale is a tool to resize the web page based on the visible area defined.
 
-It uses new CSS3 properties_transform_  and _transform-origin_
+It uses new CSS3 properties _transform_  and _transform-origin_
 
 ##How to use
 
@@ -61,8 +61,8 @@ var options = {
 	minHeight: 450, //      [Number]        minimum height of the visible zone (0 to disable)
 	maxWidth: 0, //         [Number]        maximum width of the visible zone (0 to disable)
 	maxHeight: 0, //        [Number]        maximum height of the visible zone (0 to disable)
-	top: 'center', //       [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
-	left: 'center', //      [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "middle", "left")
+	top: 'center', //       [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+	left: 'center', //      [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 	offsetTop: 450, //      [Number]        vertical offset of the visible area compared to the whole area
 	offsetLeft: 450, //     [Number]        horizontal offset of the visible area compared to the whole area
 	unlockWidth: false, //  [Boolean]       authorization resize the width to fit the refrence
