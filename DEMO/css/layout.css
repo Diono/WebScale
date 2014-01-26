@@ -1,0 +1,175 @@
+html,
+body {
+	position         : absolute;
+	top              : 0;
+	right            : 0;
+	bottom           : 0;
+	left             : 0;
+
+	height           : 100%;
+	width            : 100%;
+	margin           : 0;
+	padding          : 0;
+
+	background-color : #BECACE;
+	font-family      : "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+#wrapper {
+	position : absolute;
+	top      : 96px;
+	right    : 96px;
+	left     : 96px;
+	z-index  : 1;
+
+	height   : 646px;
+}
+
+#overlay {
+	position          : absolute;
+	display           : none;
+	top               : 0;
+	right             : 0;
+	bottom            : 0;
+	left              : 0;
+	z-index           : 2;
+
+	height            : 100%;
+	width             : 100%;
+
+	cursor            : se-resize;
+	background-image  : url('../images/05.gif');
+	background-repeat : repeat;
+}
+
+#sizing {
+	position         : absolute;
+	top              : 0;
+	left             : 0;
+
+	overflow         : hidden;
+	height           : 550px;
+	width            : 550px;
+
+	background-color : #FFFFFF;
+}
+
+#sizeTool {
+	position            : absolute;
+	right               : 0;
+	bottom              : 0;
+	z-index             : 3;
+
+	height              : 40px;
+	width               : 40px;
+
+	cursor              : se-resize;
+	background-image    : url('../images/03.gif');
+	background-position : 0 0;
+	background-repeat   : no-repeat;
+}
+
+#unable {
+	position          : absolute;
+	top               : 0;
+	right             : 0;
+	bottom            : 0;
+	left              : 0;
+	z-index           : 2;
+
+	height            : 100%;
+	width             : 100%;
+	padding           : 45% 0 0 0;
+
+	background-image  : url('../images/04.png');
+	background-repeat : repeat;
+	color             : #FFFFFF;
+	text-align        : center;
+}
+
+#demo {
+	position            : absolute;
+	top                 : -400px;
+	left                : -400px;
+	z-index             : 1;
+
+	height              : 1350px;
+	width               : 1350px;
+
+	background-color    : #BECACE;
+	background-color    : #FFFFFF;
+	background-image    : url('../images/01.jpg');
+	background-position : center center;
+	background-repeat   : no-repeat;
+}
+
+#informations {
+	position : absolute;
+	top      : 0;
+	right    : 0;
+
+	height   : 550px;
+}
+
+#title {
+	position    : absolute;
+	top         : 0;
+	right       : 0;
+	left        : 0;
+
+	height      : 30px;
+	width       : 100%;
+
+	font-size   : 30px;
+	line-height : 30px;
+	text-align  : left;
+}
+
+#description {
+	position    : absolute;
+	top         : 60px;
+	left        : 0;
+
+	height      : 285px;
+
+	font-size   : 20px;
+	line-height : 30px;
+	text-align  : justify;
+}
+
+#schema {
+	position : absolute;
+	top      : 60px;
+	right    : 0;
+
+	height   : 225px;
+	width    : 225px;
+}
+
+#github {
+	position    : absolute;
+	top         : 375px;
+	right       : 0;
+	left        : 0;
+
+	height      : 30px;
+	width       : 100%;
+
+	font-size   : 20px;
+	line-height : 30px;
+	text-align  : right;
+}
+
+.WebScale,
+.javascript,
+#github a {
+	color : #135C71;
+}
+
+.text {
+	color : #575D5F;
+}
+
+.javascript {
+	font-family : "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+}
