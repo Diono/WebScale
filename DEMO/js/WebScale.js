@@ -260,7 +260,7 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
@@ -319,7 +319,7 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+	// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
@@ -377,7 +377,7 @@
 		// maximum height of the visible zone (0 to disable)
 		maxHeight: 0,
 
-		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		top: 0,
 
 		// horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")

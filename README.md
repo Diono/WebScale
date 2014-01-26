@@ -61,7 +61,7 @@ var options = {
 	minHeight: 450, //      [Number]        minimum height of the visible zone (0 to disable)
 	maxWidth: 0, //         [Number]        maximum width of the visible zone (0 to disable)
 	maxHeight: 0, //        [Number]        maximum height of the visible zone (0 to disable)
-	top: 'center', //       [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+	top: 'center', //       [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 	left: 'center', //      [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 	offsetTop: 450, //      [Number]        vertical offset of the visible area compared to the whole area
 	offsetLeft: 450, //     [Number]        horizontal offset of the visible area compared to the whole area
@@ -77,7 +77,7 @@ var options = {
 
 ##Extras
 
-WebScale automatically detects whether the browser supports css3 "transform" and "transform-origin" properties.
+WebScale automatically detects whether the browser supports css3 _transform_ and _transform-origin_ properties.
 
 Each instance of WebScale retourn detection in _available_ variable
 
