@@ -194,17 +194,19 @@
 			$sizing: null,
 
 			sizing: function(evt) {
-				var type = evt ? evt.type.toLowerCase() : null;
+				var type = evt ? evt.type.toLowerCase() : null,
+					evtX = evt.x || evt.padeX || evt.screenX || evt.clientX,
+					evtY = evt.y || evt.padeY || evt.screenY || evt.clientY;
 
 				if (type) {
 					if (/mousedown/.test(type)) {
 						this.listen = true;
-						this.offsets = [evt.x, evt.y];
+						this.offsets = [evtX, evtY];
 						this.$overlay.style.display = "block";
 					} else if (/mousemove/.test(type) && this.listen) {
 
-						this.dimentions[2] = Math.max(Math.min(this.dimentions[0] + (evt.x - this.offsets[0]), 550), 100);
-						this.dimentions[3] = Math.max(Math.min(this.dimentions[1] + (evt.y - this.offsets[1]), 550), 100);
+						this.dimentions[2] = Math.max(Math.min(this.dimentions[0] + (evtX - this.offsets[0]), 550), 100);
+						this.dimentions[3] = Math.max(Math.min(this.dimentions[1] + (evtY - this.offsets[1]), 550), 100);
 
 						this.$sizing.style.width = this.dimentions[2] + "px";
 						this.$sizing.style.height = this.dimentions[3] + "px";
