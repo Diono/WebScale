@@ -91,13 +91,14 @@
 
 				if (!loop) {
 
-					var splitCss = css.split('-'),
+					var compaCss = compatibility[ext].replace('-', '') + "-" + css,
+						splitCss = compaCss.split('-'),
 						splitLength = splitCss.length;
 
 					if (splitLength > 0) {
-						compaCss = compatibility[ext].replace('-', '').toLowerCase();
+						compaCss = splitLength[0].toLowerCase();
 
-						for (var i = 0; i < splitLength; i++) {
+						for (var i = 1; i < splitLength; i++) {
 							compaCss += splitCss[i].charAt(0).toUpperCase();
 							compaCss += splitCss[i].slice(1);
 						}
@@ -260,7 +261,7 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
@@ -319,7 +320,7 @@
 		// 									maxWidth:         [Number]        maximum width of the visible zone (0 to disable)
 		// 									maxHeight:        [Number]        maximum height of the visible zone (0 to disable)
 		//
-		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// 									top:              [String/Number] vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		// 									left:             [String/Number] horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
 		//
 		// 									offsetTop:        [Number]        vertical offset of the visible area compared to the whole area
@@ -377,7 +378,7 @@
 		// maximum height of the visible zone (0 to disable)
 		maxHeight: 0,
 
-		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
+		// vertical positioning of the visible area within its container (either in pixels or as a percentage or text: "top", "center", "bottom")
 		top: 0,
 
 		// horizontal positioning of the visible area within its container (either in pixels or as a percentage or text: "right", "center", "left")
@@ -452,14 +453,11 @@
 					var width = Math.max(Math.min(bodyWidth, maxWidth), minWidth),
 						height = Math.max(Math.min(bodyHeight, maxHeight), minHeight);
 
-
-
-					if (transform && transformOrigin) {
+					if (transform) {
 						this.$content.style[transform] = 'scale(' + ratio + ')';
-						this.$content.style[transformOrigin] = '0 0';
+						if (transformOrigin) this.$content.style[transformOrigin] = '0 0';
 						available = true;
 					}
-
 
 					if (this.unlockWidth) this.$content.style.width = (bodyWidth < minWidth ? Math.ceil(bodyWidth / ratio) : Math.ceil(width / ratio)) + "px";
 
