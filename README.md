@@ -1,6 +1,6 @@
-#WebScale v0.1.10
+#WebScale v0.1.11
 
-tools to customize a web page dimensions
+Tools to customize a web page dimensions
 
 @author Diono CORBEL http://www.diono.fr/
 
