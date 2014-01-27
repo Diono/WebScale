@@ -96,7 +96,7 @@
 						splitLength = splitCss.length;
 
 					if (splitLength > 0) {
-						compaCss = splitLength[0].toLowerCase();
+						compaCss = splitCss[0].toLowerCase();
 
 						for (var i = 1; i < splitLength; i++) {
 							compaCss += splitCss[i].charAt(0).toUpperCase();
