@@ -94,22 +94,28 @@
 					var compaCss = compatibility[ext].replace('-', '') + "-" + css,
 						splitCss = compaCss.split('-'),
 						splitLength = splitCss.length;
-
+					
 					if (splitLength > 0) {
-						compaCss = splitCss[0].toLowerCase();
+						
+						compaCss = "";
 
-						for (var i = 1; i < splitLength; i++) {
+						for (var i = 0; i < splitLength; i++) {
 							compaCss += splitCss[i].charAt(0).toUpperCase();
 							compaCss += splitCss[i].slice(1);
 						}
+						
+						compaCss = compaCss.replace(/^-/, '');
 
-						compaCss = availableCss(compaCss, true, ext);
-					}
+						var result = availableCss(compaCss, true, ext);
+						
+						if (!result) result = availableCss(compaCss.charAt(0).toLowerCase() + compaCss.slice(1), true, ext);
+						
+						compaCss = result;
+					} else compaCss = null;
+
+					ext++;
+					if (!compaCss && ext < compatibilityLength) compaCss = availableCss(css, false, ext);
 				}
-
-				ext++;
-				if (!compaCss && ext < compatibilityLength) compaCss = availableCss(css, false, ext);
-
 			}
 
 			return compaCss;
