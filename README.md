@@ -1,14 +1,10 @@
-#WebScale v0.1
+#WebScale v0.1.10
 
 tools to customize a web page dimensions
 
-@author Diono CORBEL
+@author Diono CORBEL http://www.diono.fr/
 
-• http://www.diono.fr/
-
-• http://www.dionofolio.com/
-
-• http://www.dionoportfolio.com/
+DEMO : http://www.dionoportfolio.com/WebScale/
 
 ##Introduction
 
@@ -79,7 +75,7 @@ var options = {
 
 WebScale automatically detects whether the browser supports css3 _transform_ and _transform-origin_ properties.
 
-Each instance of WebScale retourn detection in _available_ variable
+Each instance of WebScale return detection in _available_ variable
 
 ```javascript
 var compatible = WebScale(DOM, options).available;
