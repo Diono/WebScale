@@ -1,10 +1,8 @@
 /**
- * WebScale v0.1
+ * WebScale v0.1.18
  *
- * @author Diono CORBEL
- * http://www.diono.fr/
- * http://www.dionofolio.com/
- * http://www.dionoportfolio.com/
+ * @author Diono CORBEL  http://www.diono.fr/
+ * DEMO : http://www.dionoportfolio.com/WebScale/
  */
 
 ;
@@ -94,22 +92,22 @@
 					var compaCss = compatibility[ext].replace('-', '') + "-" + css,
 						splitCss = compaCss.split('-'),
 						splitLength = splitCss.length;
-					
+
 					if (splitLength > 0) {
-						
+
 						compaCss = "";
 
 						for (var i = 0; i < splitLength; i++) {
 							compaCss += splitCss[i].charAt(0).toUpperCase();
 							compaCss += splitCss[i].slice(1);
 						}
-						
+
 						compaCss = compaCss.replace(/^-/, '');
 
 						var result = availableCss(compaCss, true, ext);
-						
+
 						if (!result) result = availableCss(compaCss.charAt(0).toLowerCase() + compaCss.slice(1), true, ext);
-						
+
 						compaCss = result;
 					} else compaCss = null;
 
@@ -296,7 +294,11 @@
 				this[optionsList[i]] = options[optionsList[i]] !== undefined ? options[optionsList[i]] : this[optionsList[i]];
 			}
 
-			if (options.auto) ON.call(this, this.$body, 'resize', this.responsive);
+			if (options.auto) {
+				ON.call(this, win, 'resize', this.responsive);
+				ON.call(this, win.document, 'resize', this.responsive);
+				ON.call(this, win.document.body, 'resize', this.responsive);
+			}
 
 			this.available = this.responsive();
 

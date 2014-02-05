@@ -1,4 +1,4 @@
-#WebScale v0.1.17
+#WebScale v0.1.18
 
 Tools to customize a web page dimensions
 
